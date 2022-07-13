@@ -2,9 +2,7 @@ const eValor = document.querySelector("p");
 
 const eButtons = document.querySelectorAll("button");
 const eParButton = eButtons[0];
-eParButton.addEventListener("click", ehParListener);
 const eImparButton = eButtons[1];
-eImparButton.addEventListener("click", ehImparListener);
 
 const eLists = document.querySelectorAll("ul");
 const eParList = eLists[0];
@@ -15,15 +13,15 @@ function sorteiaValor() {
   eValor.textContent = novoNumero;
 }
 
-function ehParListener(event) {
+eParButton.addEventListener("click", (event) => {
   console.log("eh par!");
   criaElemento(eParList);
-}
+});
 
-function ehImparListener(event) {
+eImparButton.addEventListener("click", (event) => {
   console.log("eh impar!");
   criaElemento(eImparList);
-}
+});
 
 function criaElemento(lista) {
   const eLi = document.createElement("li");
