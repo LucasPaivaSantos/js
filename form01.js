@@ -10,8 +10,8 @@ function submitListener(event) {
   event.preventDefault();
   criaElemento(
     document.exemplo01.cor.value,
-    document.exemplo01.largura.value,
-    document.exemplo01.altura.value
+    Number(document.exemplo01.largura.value),
+    Number(document.exemplo01.altura.value)
   );
 
   document.exemplo01.reset();
