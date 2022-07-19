@@ -4,8 +4,13 @@ function criaElemento(cor, largura, altura) {
   document.body.appendChild(eNovo);
 }
 
-criaElemento(
-  document.exemplo01.cor.value,
-  document.exemplo01.largura.value,
-  document.exemplo01.altura.value
-);
+document.exemplo01.addEventListener("submit", submitListener);
+
+function submitListener(event) {
+  event.preventDefault();
+  criaElemento(
+    document.exemplo01.cor.value,
+    document.exemplo01.largura.value,
+    document.exemplo01.altura.value
+  );
+}
