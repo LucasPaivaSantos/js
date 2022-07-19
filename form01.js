@@ -13,4 +13,6 @@ function submitListener(event) {
     document.exemplo01.largura.value,
     document.exemplo01.altura.value
   );
+
+  document.exemplo01.reset();
 }
